@@ -20,6 +20,10 @@ void Graph::addPlaces(std::string _name, std::string _info)
 	graph.push_back(std::vector<Path>(len));
 }
 
+void Graph::addPlaces(json Json)
+{
+}
+
 void Graph::addPath(uint32_t _busIndex, uint32_t _start, uint32_t _end, uint32_t _time, uint32_t _cost)
 {
 	if (_start >= len || _end >= len) {
@@ -27,6 +31,10 @@ void Graph::addPath(uint32_t _busIndex, uint32_t _start, uint32_t _end, uint32_t
 		return;
 	}
 	graph[_start][_end].compare(_busIndex, _time, _cost);
+}
+
+void Graph::addPath(json Josn)
+{
 }
 
 void Graph::printPlaces()

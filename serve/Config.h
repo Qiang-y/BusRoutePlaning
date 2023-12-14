@@ -8,8 +8,9 @@
 #include<vector>
 #include<stack>
 #include<string>
-#include <utility>
-
+#include<utility>
+#include"json.hpp"
+using json = nlohmann::json;
 //展示错误信息
 #define err(Msg) (std::cout << "[" << __LINE__ << "]" << Msg << " err" << std::endl);
 

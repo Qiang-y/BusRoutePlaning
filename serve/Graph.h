@@ -12,11 +12,13 @@ public:
     Graph();
     Graph(int _len, std::vector<Places*> _places);
     void addPlaces(std::string _name, std::string _info);
+    void addPlaces(json Json);
     void addPath(uint32_t _busIndex
                 , uint32_t _start
                 , uint32_t _end
                 , uint32_t _time
                 , uint32_t _cost);
+    void addPath(json Josn);
     void printPlaces();
     void PrintPath();
     // 此处采用Dijkstra算法
